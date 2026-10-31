@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found | Taranjot Singh</title>
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@500..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@500..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap"></noscript>
+  <script>
+  /* Theme gate: applies the saved or OS theme and the saved accent before first paint */
+  (function(){var d=document.documentElement,t=null,a=null;d.classList.add('js');
+  try{t=localStorage.getItem('theme');a=localStorage.getItem('accent')}catch(e){} /* storage may be blocked: fall through to the OS preference */
+  d.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(a)d.dataset.accent=a;
+  /* Fonts: attach the preloaded stylesheet from script so it never blocks the first paint (the noscript tag covers scripting-off) */
+  var f=document.createElement('link');f.rel='stylesheet';f.href='https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=JetBrains+Mono:wght@500..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap';document.head.appendChild(f)})();
+  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+</svg>
+<div class="atmosphere" aria-hidden="true">
+  <span class="atmosphere__blob atmosphere__blob--1"></span>
+  <span class="atmosphere__blob atmosphere__blob--2"></span>
+  <span class="atmosphere__blob atmosphere__blob--3"></span>
+  <span class="atmosphere__dots"></span>
+  <span class="atmosphere__grain"></span>
+</div>
+
+<main class="notfound" id="main">
+  <div class="notfound__inner">
+    <p class="notfound__code text-grad" aria-hidden="true">404</p>
+    <h1 class="t-h2">Page not found</h1>
+    <p class="text-muted">That page is not here. It may have moved, or the link may have a typo.</p>
+    <a class="btn btn--primary btn--arrow" href="/">Back to home <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+  </div>
+</main>
+</body>
+</html>

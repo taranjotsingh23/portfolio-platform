@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | Portfolio Analytics</title>
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <section id="login" class="login">
+    <form id="loginForm" class="card">
+      <h1>Admin login</h1>
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password" required>
+      <button class="btn" type="submit">Sign in</button>
+      <p id="loginError" class="err"></p>
+    </form>
+  </section>
+
+  <div id="app" hidden>
+    <header class="top">
+      <h1>Portfolio Analytics</h1>
+      <div class="controls">
+        <select id="range">
+          <option value="7">Last 7 days</option>
+          <option value="30" selected>Last 30 days</option>
+          <option value="90">Last 90 days</option>
+          <option value="365">Last year</option>
+          <option value="3650">All time</option>
+        </select>
+        <button class="btn" id="refresh">Refresh</button>
+        <button class="btn ghost" id="logout">Log out</button>
+      </div>
+    </header>
+
+    <main>
+      <p id="error" class="err"></p>
+      <div class="kpis" id="kpis"></div>
+
+      <div class="two">
+        <div class="card"><h2>Visits per day</h2><canvas id="lineChart"></canvas></div>
+        <div class="card"><h2>New vs returning</h2><canvas id="donut"></canvas></div>
+      </div>
+
+      <div class="four">
+        <div class="card"><h2>Traffic sources</h2><div id="sources"></div></div>
+        <div class="card"><h2>Devices</h2><div id="devices"></div></div>
+        <div class="card"><h2>Browsers</h2><div id="browsers"></div></div>
+        <div class="card"><h2>Countries</h2><div id="countries"></div></div>
+      </div>
+
+      <div class="card"><h2>Recent visitors</h2><div class="scroll" id="recent"></div></div>
+
+      <div class="card">
+        <div class="row">
+          <h2>Messages <span class="badge" id="badge"></span></h2>
+          <select id="msgFilter">
+            <option value="">All</option>
+            <option value="new">New</option>
+            <option value="read">Read</option>
+            <option value="archived">Archived</option>
+          </select>
+        </div>
+        <div id="messages"></div>
+      </div>
+    </main>
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

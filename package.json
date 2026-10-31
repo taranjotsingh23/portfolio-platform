@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node scripts/check-setup.js",
+    "check:fill-jwt": "node scripts/check-setup.js --fill-jwt",
+    "smoke": "node scripts/smoke-test.js",
+    "cleanup": "node scripts/cleanup-test-data.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "mongoose": "^8.9.0"
+  }
+}
